@@ -65,12 +65,12 @@ Function New-CachetComponent {
             status = $cStatus;
         }
 
-    If ($GroupID) {
+    If ($ComponentGroupID) {
         Write-Verbose 'Adding GroupID To Values'
         $cachetValues.group_id = $ComponentGroupID
     }
 
-    If ($Enabled) {
+    If ($ComponentEnabled) {
         Write-Verbose 'Adding Enabled To Values'
             $cEnabled = Get-CachetStatusId -StatusName $ComponentEnabled
             $cachetValues.enabled = $cEnabled
